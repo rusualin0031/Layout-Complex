@@ -1,6 +1,5 @@
 @charset "UTF-8";
 
-/* Typeface source: https://rsms.me/inter/ */
 @font-face {
 	font-family: 'Inter';
 	font-weight: 100 900;
@@ -8,18 +7,13 @@
 	font-style: normal;
 	font-named-instance: 'Regular';
 	src: url("./Inter-roman.var.woff2?v=3.18") format("woff2");
-}
+} 
 
 *, *::before, *::after { box-sizing: border-box; }
 
-html { background: black url("background.jpg") center center no-repeat; background-size: cover; color: white; font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5em; }
-@supports (font-variation-settings: normal) {
-	html { font-family: 'Inter var', Helvetica, Arial, sans-serif; } 
-}
+html { font-family: 'Inter', Helvetica, Arial, sans-serif; font-size: 16px; line-height: 1.5em; }
 
-body { display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpeed;
-	@media (min-width: 500px) { display: grid; place-items: center; }
-}
+body { display: block; min-height: 100vh; margin: 0; text-rendering: optimizeSpeed;}
 
 img, picture { max-width: 100%; display: block; }
 
@@ -27,7 +21,39 @@ input, button, textarea, select { font: inherit; }
 
 strong { font-weight: 900; }
 
+/**************************************************/
 
+.Container { background: black; height: 200vh;} 
+    .Header {display: flex; position: sticky; top: 0; background: white; box-shadow: 0 1em 1em rgba(0,0,0,0.1); }
+        .Logo { }
+            .LogoImage { }
+        .TriggerButton { display: block; width: 2rem; height: 2rem;}
+            .SearchTrigger { }
+            .MenuTrigger { }
+            .CartTrigger { }
+                .TriggerImage { }
+                    .SearchTriggerImage { }
+                    .MenuTriggerImage { }
+                    .CartTriggerImage { }
+        .SearchForm { display: none; }
+            .Fieldset { }
+                .Legend { }
+                    .Label { }
+                        .SearchLabel { }
+                            .SearchLabelText { }
+                            .Input { }
+                             .SearchInput { }
+        .MainMenu { display: none;}
+            .MainMenuList { }
+                .MainMenuItem { }
+                    .MainMenuLink { }
+                    .MainMenuSublist { }
+                        .MainMenuSubitem { }
+                            .MainMenuSublink { }
+    .Main { }
+    .Footer { }
+
+/**************************************************/
 
 @media (prefers-reduced-motion: reduce) {
 	html:focus-within { scroll-behavior: auto; }

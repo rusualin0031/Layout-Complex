@@ -1,5 +1,4 @@
 @charset "UTF-8";
-/* Typeface source: https://rsms.me/inter/ */
 @font-face {
   font-family: "Inter";
   font-weight: 100 900;
@@ -13,30 +12,16 @@
 }
 
 html {
-  background: black url("background.jpg") center center no-repeat;
-  background-size: cover;
-  color: white;
   font-family: "Inter", Helvetica, Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5em;
 }
 
-@supports (font-variation-settings: normal) {
-  html {
-    font-family: "Inter var", Helvetica, Arial, sans-serif;
-  }
-}
 body {
   display: block;
   min-height: 100vh;
   margin: 0;
   text-rendering: optimizeSpeed;
-}
-@media (min-width: 500px) {
-  body {
-    display: grid;
-    place-items: center;
-  }
 }
 
 img, picture {
@@ -52,6 +37,35 @@ strong {
   font-weight: 900;
 }
 
+/**************************************************/
+.Container {
+  background: black;
+  height: 200vh;
+}
+
+.Header {
+  display: flex;
+  position: sticky;
+  top: 0;
+  background: white;
+  box-shadow: 0 1em 1em rgba(0, 0, 0, 0.1);
+}
+
+.TriggerButton {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+.SearchForm {
+  display: none;
+}
+
+.MainMenu {
+  display: none;
+}
+
+/**************************************************/
 @media (prefers-reduced-motion: reduce) {
   html:focus-within {
     scroll-behavior: auto;
